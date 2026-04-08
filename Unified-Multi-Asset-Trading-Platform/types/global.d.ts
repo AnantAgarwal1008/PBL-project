@@ -235,6 +235,13 @@ declare global {
         purchasedAt?: string;
     };
 
+    type EnrichedPortfolioItem = PortfolioItem & {
+        currentPrice: number | null;
+        currentValue: number | null;
+        returnAmount: number | null;
+        returnPercent: number | null;
+    };
+
     type BuyPanelProps = {
         symbol: string;
         company: string;
@@ -249,7 +256,7 @@ declare global {
     };
 
     type PortfolioTableProps = {
-        items: PortfolioItem[];
+        items: EnrichedPortfolioItem[];
     };
 }
 
