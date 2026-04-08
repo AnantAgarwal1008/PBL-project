@@ -12,12 +12,14 @@ export async function buyStock({
     quantity,
     purchasePrice,
     purchaseType,
+    assetType = 'stock',
 }: {
     symbol: string;
     company: string;
     quantity: number;
     purchasePrice: number;
     purchaseType: 'market' | 'limit';
+    assetType?: 'stock' | 'crypto';
 }) {
     const session = await auth.api.getSession({ headers: await headers() });
     if (!session?.user) throw new Error('Not authenticated');
@@ -27,22 +29,24 @@ export async function buyStock({
 
     await connectToDatabase();
 
-    const existing = await Portfolio.findOne({ userId: session.user.id, symbol: symbol.toUpperCase() });
+    const lookupSymbol = assetType === 'crypto' ? symbol : symbol.toUpperCase();
+    const existing = await Portfolio.findOne({ userId: session.user.id, symbol: lookupSymbol });
     if (existing) {
         const totalQty = existing.quantity + quantity;
         const avgPrice = (existing.purchasePrice * existing.quantity + purchasePrice * quantity) / totalQty;
         existing.quantity = totalQty;
-        existing.purchasePrice = Math.round(avgPrice * 100) / 100;
+        existing.purchasePrice = Math.round(avgPrice * 10000) / 10000;
         existing.purchaseType = purchaseType;
         await existing.save();
     } else {
         await Portfolio.create({
             userId: session.user.id,
-            symbol: symbol.toUpperCase(),
+            symbol: lookupSymbol,
             company,
             quantity,
             purchasePrice,
             purchaseType,
+            assetType,
         });
     }
 
@@ -64,6 +68,7 @@ export async function getPortfolio() {
         quantity: item.quantity,
         purchasePrice: item.purchasePrice,
         purchaseType: item.purchaseType,
+        assetType: (item.assetType as 'stock' | 'crypto') ?? 'stock',
         purchasedAt: item.purchasedAt?.toISOString(),
     }));
 }
@@ -76,14 +81,15 @@ export async function sellStock({ symbol, quantity }: { symbol: string; quantity
 
     await connectToDatabase();
 
-    const holding = await Portfolio.findOne({ userId: session.user.id, symbol: symbol.toUpperCase() });
-    if (!holding) throw new Error('Stock not found in your portfolio');
-    if (quantity > holding.quantity) throw new Error(`You only have ${holding.quantity} shares to sell`);
+    const holding = await Portfolio.findOne({ userId: session.user.id, symbol });
+    if (!holding) throw new Error('Asset not found in your portfolio');
+    if (quantity > holding.quantity) throw new Error(`You only have ${holding.quantity} units to sell`);
 
-    if (quantity === holding.quantity) {
-        await Portfolio.deleteOne({ userId: session.user.id, symbol: symbol.toUpperCase() });
+    const remaining = Math.round((holding.quantity - quantity) * 1e8) / 1e8;
+    if (remaining <= 0) {
+        await Portfolio.deleteOne({ userId: session.user.id, symbol });
     } else {
-        holding.quantity -= quantity;
+        holding.quantity = remaining;
         await holding.save();
     }
 

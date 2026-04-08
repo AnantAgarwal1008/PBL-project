@@ -1,7 +1,7 @@
 'use server';
 
 import { getDateRange, validateArticle, formatArticle } from '@/lib/utils';
-import { POPULAR_STOCK_SYMBOLS } from '@/lib/constants';
+import { POPULAR_STOCK_SYMBOLS, POPULAR_CRYPTO } from '@/lib/constants';
 import { cache } from 'react';
 
 const FINNHUB_BASE_URL = 'https://finnhub.io/api/v1';
@@ -21,6 +21,31 @@ async function fetchJSON<T>(url: string, revalidateSeconds?: number): Promise<T>
 }
 
 export { fetchJSON };
+
+export async function searchCryptos(query?: string): Promise<CryptoAsset[]> {
+    const trimmed = (query ?? '').trim().toLowerCase();
+    const all = POPULAR_CRYPTO.map((c) => ({ ...c, finnhubSymbol: `${c.exchange}:${c.symbol}` }));
+    if (!trimmed) return all;
+    return all.filter(
+        (c) =>
+            c.name.toLowerCase().includes(trimmed) ||
+            c.shortName.toLowerCase().includes(trimmed) ||
+            c.symbol.toLowerCase().includes(trimmed)
+    );
+}
+
+export async function getCryptoQuote(finnhubSymbol: string): Promise<{ price: number; change: number; changePercent: number } | null> {
+    const token = process.env.FINNHUB_API_KEY ?? FINNHUB_API_KEY_FALLBACK;
+    if (!token) return null;
+    try {
+        const url = `${FINNHUB_BASE_URL}/quote?symbol=${encodeURIComponent(finnhubSymbol)}&token=${token}`;
+        const data = await fetchJSON<{ c: number; d: number; dp: number }>(url);
+        if (!data?.c) return null;
+        return { price: data.c, change: data.d ?? 0, changePercent: data.dp ?? 0 };
+    } catch {
+        return null;
+    }
+}
 
 export async function getStockQuote(symbol: string): Promise<{ price: number; change: number; changePercent: number } | null> {
     const token = process.env.FINNHUB_API_KEY ?? FINNHUB_API_KEY_FALLBACK;

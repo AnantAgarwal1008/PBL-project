@@ -216,6 +216,14 @@ declare global {
         changePercent?: number;
     };
 
+    type CryptoAsset = {
+        symbol: string;
+        name: string;
+        shortName: string;
+        exchange: string;
+        finnhubSymbol: string;
+    };
+
     type PortfolioItem = {
         id: string;
         symbol: string;
@@ -223,6 +231,7 @@ declare global {
         quantity: number;
         purchasePrice: number;
         purchaseType: 'market' | 'limit';
+        assetType: 'stock' | 'crypto';
         purchasedAt?: string;
     };
 

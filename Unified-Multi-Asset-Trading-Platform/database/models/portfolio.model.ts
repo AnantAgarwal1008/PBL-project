@@ -7,6 +7,7 @@ const portfolioSchema = new mongoose.Schema({
     quantity: { type: Number, required: true },
     purchasePrice: { type: Number, required: true },
     purchaseType: { type: String, enum: ['market', 'limit'], required: true },
+    assetType: { type: String, enum: ['stock', 'crypto'], default: 'stock' },
     purchasedAt: { type: Date, default: Date.now },
 });
 

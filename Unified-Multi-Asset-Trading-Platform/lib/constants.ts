@@ -1,6 +1,7 @@
 export const NAV_ITEMS = [
     { href: '/', label: 'Dashboard' },
     { href: '/search', label: 'Search' },
+    { href: '/crypto', label: 'Crypto' },
     { href: '/portfolio', label: 'Portfolio' },
 ];
 
@@ -262,6 +263,29 @@ export const COMPANY_FINANCIALS_WIDGET_CONFIG = (symbol: string) => ({
     largeChartUrl: '',
 });
 
+export const POPULAR_CRYPTO = [
+    { symbol: 'BTCUSDT', name: 'Bitcoin', shortName: 'BTC', exchange: 'BINANCE' },
+    { symbol: 'ETHUSDT', name: 'Ethereum', shortName: 'ETH', exchange: 'BINANCE' },
+    { symbol: 'BNBUSDT', name: 'BNB', shortName: 'BNB', exchange: 'BINANCE' },
+    { symbol: 'SOLUSDT', name: 'Solana', shortName: 'SOL', exchange: 'BINANCE' },
+    { symbol: 'XRPUSDT', name: 'XRP', shortName: 'XRP', exchange: 'BINANCE' },
+    { symbol: 'ADAUSDT', name: 'Cardano', shortName: 'ADA', exchange: 'BINANCE' },
+    { symbol: 'DOGEUSDT', name: 'Dogecoin', shortName: 'DOGE', exchange: 'BINANCE' },
+    { symbol: 'AVAXUSDT', name: 'Avalanche', shortName: 'AVAX', exchange: 'BINANCE' },
+    { symbol: 'DOTUSDT', name: 'Polkadot', shortName: 'DOT', exchange: 'BINANCE' },
+    { symbol: 'MATICUSDT', name: 'Polygon', shortName: 'MATIC', exchange: 'BINANCE' },
+    { symbol: 'LINKUSDT', name: 'Chainlink', shortName: 'LINK', exchange: 'BINANCE' },
+    { symbol: 'LTCUSDT', name: 'Litecoin', shortName: 'LTC', exchange: 'BINANCE' },
+    { symbol: 'UNIUSDT', name: 'Uniswap', shortName: 'UNI', exchange: 'BINANCE' },
+    { symbol: 'ATOMUSDT', name: 'Cosmos', shortName: 'ATOM', exchange: 'BINANCE' },
+    { symbol: 'XLMUSDT', name: 'Stellar', shortName: 'XLM', exchange: 'BINANCE' },
+    { symbol: 'NEARUSDT', name: 'NEAR Protocol', shortName: 'NEAR', exchange: 'BINANCE' },
+    { symbol: 'FILUSDT', name: 'Filecoin', shortName: 'FIL', exchange: 'BINANCE' },
+    { symbol: 'AAVEUSDT', name: 'Aave', shortName: 'AAVE', exchange: 'BINANCE' },
+    { symbol: 'APTUSDT', name: 'Aptos', shortName: 'APT', exchange: 'BINANCE' },
+    { symbol: 'SHIBUSDT', name: 'Shiba Inu', shortName: 'SHIB', exchange: 'BINANCE' },
+];
+
 export const POPULAR_STOCK_SYMBOLS = [
     // Tech Giants (the big technology companies)
     'AAPL',
@@ -323,6 +347,52 @@ export const POPULAR_STOCK_SYMBOLS = [
     'GRAB',
     'SE',
 ];
+
+export const CRYPTO_CHART_WIDGET_CONFIG = (symbol: string) => ({
+    allow_symbol_change: false,
+    calendar: false,
+    details: true,
+    hide_side_toolbar: true,
+    hide_top_toolbar: false,
+    hide_legend: false,
+    hide_volume: false,
+    hotlist: false,
+    interval: 'D',
+    locale: 'en',
+    save_image: false,
+    style: 1,
+    symbol: symbol,
+    theme: 'dark',
+    timezone: 'Etc/UTC',
+    backgroundColor: '#141414',
+    gridColor: '#141414',
+    watchlist: [],
+    withdateranges: false,
+    compareSymbols: [],
+    studies: [],
+    width: '100%',
+    height: 600,
+});
+
+export const CRYPTO_SYMBOL_INFO_CONFIG = (symbol: string) => ({
+    symbol: symbol,
+    colorTheme: 'dark',
+    isTransparent: true,
+    locale: 'en',
+    width: '100%',
+    height: 170,
+});
+
+export const CRYPTO_TECHNICAL_ANALYSIS_CONFIG = (symbol: string) => ({
+    symbol: symbol,
+    colorTheme: 'dark',
+    isTransparent: true,
+    locale: 'en',
+    width: '100%',
+    height: 400,
+    interval: '1h',
+    largeChartUrl: '',
+});
 
 export const NO_MARKET_NEWS =
     '<p class="mobile-text" style="margin:0 0 20px 0;font-size:16px;line-height:1.6;color:#4b5563;">No market news available today. Please check back tomorrow.</p>';
