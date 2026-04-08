@@ -215,6 +215,33 @@ declare global {
         threshold: number;
         changePercent?: number;
     };
+
+    type PortfolioItem = {
+        id: string;
+        symbol: string;
+        company: string;
+        quantity: number;
+        purchasePrice: number;
+        purchaseType: 'market' | 'limit';
+        purchasedAt?: string;
+    };
+
+    type BuyPanelProps = {
+        symbol: string;
+        company: string;
+        initialPrice: number | null;
+    };
+
+    type SellModalProps = {
+        item: PortfolioItem;
+        open: boolean;
+        onClose: () => void;
+        onSold: () => void;
+    };
+
+    type PortfolioTableProps = {
+        items: PortfolioItem[];
+    };
 }
 
 export {};

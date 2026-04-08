@@ -1,10 +1,11 @@
 import TradingViewWidget from "@/components/TradingViewWidget";
 import WatchlistButton from "@/components/WatchlistButton";
+import BuyPanel from "@/components/BuyPanel";
+import { getStockQuote } from "@/lib/actions/finnhub.actions";
 import {
   SYMBOL_INFO_WIDGET_CONFIG,
   CANDLE_CHART_WIDGET_CONFIG,
   BASELINE_WIDGET_CONFIG,
-  TECHNICAL_ANALYSIS_WIDGET_CONFIG,
   COMPANY_PROFILE_WIDGET_CONFIG,
   COMPANY_FINANCIALS_WIDGET_CONFIG,
 } from "@/lib/constants";
@@ -12,6 +13,9 @@ import {
 export default async function StockDetails({ params }: StockDetailsPageProps) {
   const { symbol } = await params;
   const scriptUrl = `https://s3.tradingview.com/external-embedding/embed-widget-`;
+
+  const quote = await getStockQuote(symbol);
+  const currentPrice = quote?.price ?? null;
 
   return (
     <div className="flex min-h-screen p-4 md:p-6 lg:p-8">
@@ -45,7 +49,11 @@ export default async function StockDetails({ params }: StockDetailsPageProps) {
             <WatchlistButton symbol={symbol.toUpperCase()} company={symbol.toUpperCase()} isInWatchlist={false} />
           </div>
 
-          
+          <BuyPanel
+            symbol={symbol.toUpperCase()}
+            company={symbol.toUpperCase()}
+            initialPrice={currentPrice}
+          />
 
           <TradingViewWidget
             scriptUrl={`${scriptUrl}company-profile.js`}

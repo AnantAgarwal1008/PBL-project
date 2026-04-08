@@ -22,6 +22,19 @@ async function fetchJSON<T>(url: string, revalidateSeconds?: number): Promise<T>
 
 export { fetchJSON };
 
+export async function getStockQuote(symbol: string): Promise<{ price: number; change: number; changePercent: number } | null> {
+    const token = process.env.FINNHUB_API_KEY ?? FINNHUB_API_KEY_FALLBACK;
+    if (!token) return null;
+    try {
+        const url = `${FINNHUB_BASE_URL}/quote?symbol=${encodeURIComponent(symbol.toUpperCase())}&token=${token}`;
+        const data = await fetchJSON<{ c: number; d: number; dp: number }>(url);
+        if (!data?.c) return null;
+        return { price: data.c, change: data.d ?? 0, changePercent: data.dp ?? 0 };
+    } catch {
+        return null;
+    }
+}
+
 export async function getNews(symbols?: string[]): Promise<MarketNewsArticle[]> {
   try {
     const range = getDateRange(5);
