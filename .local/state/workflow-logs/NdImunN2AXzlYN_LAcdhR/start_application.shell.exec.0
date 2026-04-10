@@ -1,0 +1,59 @@
+
+> stocks_app@0.1.0 dev
+> next dev --turbopack -p 5000 -H 0.0.0.0
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:5000
+   - Network:      http://0.0.0.0:5000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 985ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 6.6s
+ GET / [32m200[39m in 9333ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET / [32m200[39m in 10333ms
+ GET / [34m307[39m in 158ms
+ [37m[1m○[22m[39m Compiling /sign-in ...
+ [32m[1m✓[22m[39m Compiled /sign-in in 680ms
+ GET /sign-in [32m200[39m in 861ms
+ [37m[1m○[22m[39m Compiling /portfolio ...
+ [32m[1m✓[22m[39m Compiled /portfolio in 685ms
+ GET /portfolio [32m200[39m in 2922ms
+ GET /portfolio [32m200[39m in 973ms
+ [37m[1m○[22m[39m Compiling /search ...
+ [32m[1m✓[22m[39m Compiled /search in 520ms
+ GET /search [32m200[39m in 626ms
+ GET /search [32m200[39m in 114ms
+ GET /search [32m200[39m in 79ms
+ POST /search [32m200[39m in 59ms
+ [32m[1m✓[22m[39m Compiled /stocks/[symbol] in 403ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /stocks/AAPL [32m200[39m in 3867ms
+ GET /stocks/AAPL [32m200[39m in 172ms
+ GET /stocks/AAPL [32m200[39m in 121ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ POST /stocks/AAPL [32m200[39m in 1451ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /portfolio [32m200[39m in 886ms
+ GET /portfolio [32m200[39m in 877ms
+ GET /portfolio [32m200[39m in 870ms
+ GET /portfolio [32m200[39m in 789ms
+ GET /portfolio [32m200[39m in 875ms
+ GET /portfolio [32m200[39m in 1019ms
+ GET /portfolio [32m200[39m in 793ms
+ GET /portfolio [32m200[39m in 786ms
+ GET /portfolio [32m200[39m in 2192ms
+ GET / [32m200[39m in 82ms
+ GET /search [32m200[39m in 111ms
+ POST /search [32m200[39m in 98ms
+ [32m[1m✓[22m[39m Compiled /crypto in 463ms
+ GET /crypto [32m200[39m in 531ms
+ POST /crypto [32m200[39m in 52ms
+ [32m[1m✓[22m[39m Compiled /crypto/[symbol] in 435ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /crypto/SOLUSDT [32m200[39m in 3828ms
+ POST /crypto/SOLUSDT [32m200[39m in 1491ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /portfolio [32m200[39m in 908ms
+ GET /portfolio [32m200[39m in 1021ms

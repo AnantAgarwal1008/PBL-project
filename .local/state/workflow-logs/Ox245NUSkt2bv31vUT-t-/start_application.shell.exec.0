@@ -1,0 +1,163 @@
+
+> stocks_app@0.1.0 dev
+> next dev --turbopack -p 5000 -H 0.0.0.0
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:5000
+   - Network:      http://0.0.0.0:5000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1511ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 7.3s
+ GET / [32m200[39m in 9137ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET / [32m200[39m in 11729ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 26ec1bc0-d246-44ce-b11d-3078c4ac631c-00-lfph6hjguzio.janeway.replit.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [37m[1m○[22m[39m Compiling /crypto ...
+ [32m[1m✓[22m[39m Compiled /crypto in 616ms
+ GET /crypto [34m307[39m in 783ms
+ [37m[1m○[22m[39m Compiling /sign-in ...
+ [32m[1m✓[22m[39m Compiled /sign-in in 604ms
+ GET /sign-in [32m200[39m in 778ms
+ [32m[1m✓[22m[39m Compiled /search in 490ms
+ GET /search [32m200[39m in 615ms
+ GET /search [32m200[39m in 92ms
+[Error: Failed to find Server Action "7f347b7b8722b25b49ce7cd5acb1c7121667fcba0a". This request might be from an older or newer deployment.
+Read more: https://nextjs.org/docs/messages/failed-to-find-server-action]
+ POST /search [33m404[39m in 462ms
+[Error: Failed to find Server Action "7f347b7b8722b25b49ce7cd5acb1c7121667fcba0a". This request might be from an older or newer deployment.
+Read more: https://nextjs.org/docs/messages/failed-to-find-server-action]
+ POST /search [33m404[39m in 253ms
+[Error: Failed to find Server Action "7f347b7b8722b25b49ce7cd5acb1c7121667fcba0a". This request might be from an older or newer deployment.
+Read more: https://nextjs.org/docs/messages/failed-to-find-server-action]
+ POST /search [33m404[39m in 239ms
+[Error: Failed to find Server Action "7f347b7b8722b25b49ce7cd5acb1c7121667fcba0a". This request might be from an older or newer deployment.
+Read more: https://nextjs.org/docs/messages/failed-to-find-server-action]
+ POST /search [33m404[39m in 243ms
+[Error: Failed to find Server Action "7f347b7b8722b25b49ce7cd5acb1c7121667fcba0a". This request might be from an older or newer deployment.
+Read more: https://nextjs.org/docs/messages/failed-to-find-server-action]
+ POST /search [33m404[39m in 241ms
+ GET /search [32m200[39m in 96ms
+ POST /search [32m200[39m in 55ms
+ GET /search [32m200[39m in 73ms
+ GET /search [32m200[39m in 552ms
+ [37m[1m○[22m[39m Compiling /stocks/[symbol] ...
+ [32m[1m✓[22m[39m Compiled /stocks/[symbol] in 551ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /stocks/TSLA [32m200[39m in 4012ms
+ GET /stocks/TSLA [32m200[39m in 155ms
+ GET /stocks/TSLA [32m200[39m in 120ms
+ GET /stocks/TSLA [32m200[39m in 109ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /search [32m200[39m in 628ms
+ POST /search [32m200[39m in 59ms
+ POST /search [32m200[39m in 226ms
+ POST /search [32m200[39m in 114ms
+ POST /search [32m200[39m in 71ms
+ GET /stocks/WMT [32m200[39m in 192ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /crypto [32m200[39m in 112ms
+ POST /crypto [32m200[39m in 58ms
+ [32m[1m✓[22m[39m Compiled /crypto/[symbol] in 489ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /crypto/ETHUSDT [32m200[39m in 4090ms
+ POST /crypto/ETHUSDT [32m200[39m in 1527ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ [32m[1m✓[22m[39m Compiled /portfolio in 495ms
+ GET /portfolio [32m200[39m in 1266ms
+ POST /portfolio [32m200[39m in 3006ms
+ GET /portfolio [32m200[39m in 1915ms
+ GET /crypto [32m200[39m in 109ms
+ POST /crypto [32m200[39m in 65ms
+ GET / [32m200[39m in 58ms
+ GET /search [32m200[39m in 95ms
+ POST /search [32m200[39m in 63ms
+ POST /search [32m200[39m in 64ms
+ POST /search [32m200[39m in 56ms
+ GET /stocks/WMT [32m200[39m in 234ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ POST /stocks/WMT [32m200[39m in 1532ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /portfolio [32m200[39m in 768ms
+ POST /portfolio [32m200[39m in 1661ms
+ GET /portfolio [32m200[39m in 2132ms
+ GET /crypto [32m200[39m in 69ms
+ POST /crypto [32m200[39m in 51ms
+ POST /crypto [32m200[39m in 54ms
+ POST /crypto [32m200[39m in 59ms
+ POST /crypto [32m200[39m in 63ms
+ POST /crypto [32m200[39m in 71ms
+ POST /crypto [32m200[39m in 65ms
+ POST /crypto [32m200[39m in 117ms
+ POST /crypto [32m200[39m in 51ms
+ POST /crypto [32m200[39m in 52ms
+ POST /crypto [32m200[39m in 75ms
+ POST /crypto [32m200[39m in 71ms
+ POST /crypto [32m200[39m in 63ms
+ POST /crypto [32m200[39m in 54ms
+ POST /crypto [32m200[39m in 63ms
+ GET /crypto/DOGEUSDT [32m200[39m in 210ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ POST /crypto/DOGEUSDT [32m200[39m in 1603ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /portfolio [32m200[39m in 754ms
+ GET /portfolio [32m200[39m in 747ms
+ GET /portfolio [32m200[39m in 750ms
+ GET /portfolio [32m200[39m in 804ms
+ GET /crypto [32m200[39m in 68ms
+ POST /crypto [32m200[39m in 49ms
+ GET /portfolio [32m200[39m in 756ms
+ GET /portfolio [32m200[39m in 742ms
+ GET /portfolio [32m200[39m in 745ms
+ GET /portfolio [32m200[39m in 744ms
+ GET /portfolio [32m200[39m in 753ms
+ GET /search [32m200[39m in 87ms
+ POST /search [32m200[39m in 51ms
+ GET / [32m200[39m in 91ms
+ GET /search [32m200[39m in 97ms
+ POST /search [32m200[39m in 73ms
+ GET /search [32m200[39m in 105ms
+ GET /search [32m200[39m in 585ms
+ POST /search [32m200[39m in 66ms
+ POST /search [32m200[39m in 58ms
+ POST /search [32m200[39m in 351ms
+ POST /search [32m200[39m in 476ms
+ POST /search [32m200[39m in 50ms
+ POST /search [32m200[39m in 52ms
+ GET /stocks/WMT [32m200[39m in 236ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ POST /stocks/WMT [32m200[39m in 1618ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /portfolio [32m200[39m in 823ms
+ GET /portfolio [32m200[39m in 776ms
+ POST /portfolio [32m200[39m in 1679ms
+ GET /portfolio [32m200[39m in 769ms
+ GET /crypto [32m200[39m in 101ms
+ POST /crypto [32m200[39m in 57ms
+ POST /crypto [32m200[39m in 56ms
+ POST /crypto [32m200[39m in 66ms
+ POST /crypto [32m200[39m in 64ms
+ GET /crypto/DOGEUSDT [32m200[39m in 239ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ POST /crypto/DOGEUSDT [32m200[39m in 1510ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /portfolio [32m200[39m in 760ms
+ GET /crypto [32m200[39m in 75ms
+ POST /crypto [32m200[39m in 60ms
+ GET /portfolio [32m200[39m in 752ms
+ GET /search [32m200[39m in 143ms
+ POST /search [32m200[39m in 57ms
+ GET / [32m200[39m in 62ms
+ GET /portfolio [32m200[39m in 769ms
+ GET /portfolio [32m200[39m in 774ms
+ GET /crypto/DOGEUSDT [32m200[39m in 332ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /portfolio [32m200[39m in 759ms
+ [32m[1m✓[22m[39m Compiled in 658ms
+ [32m[1m✓[22m[39m Compiled /portfolio in 53ms
+ GET /portfolio [32m200[39m in 1509ms
+ GET /stocks/TSLA [32m200[39m in 583ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ [32m[1m✓[22m[39m Compiled in 262ms

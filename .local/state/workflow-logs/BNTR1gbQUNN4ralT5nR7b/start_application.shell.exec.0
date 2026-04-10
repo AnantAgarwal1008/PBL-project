@@ -1,0 +1,41 @@
+
+> stocks_app@0.1.0 dev
+> next dev --turbopack -p 5000 -H 0.0.0.0
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:5000
+   - Network:      http://0.0.0.0:5000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1644ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 6.7s
+ GET / [32m200[39m in 9049ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET / [32m200[39m in 10290ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 26ec1bc0-d246-44ce-b11d-3078c4ac631c-00-lfph6hjguzio.janeway.replit.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [33m[1m⚠[22m[39m Found a change in next.config.ts. Restarting the server to apply the changes...
+   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:5000
+   - Network:      http://0.0.0.0:5000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1174ms
+ [37m[1m○[22m[39m Compiling /portfolio ...
+ [32m[1m✓[22m[39m Compiled /portfolio in 7.9s
+ GET /portfolio [32m200[39m in 8885ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ [31m[1m⨯[22m[39m Error: Not authenticated
+    at getPortfolio (lib/actions/portfolio.actions.ts:59:31)
+    at async Portfolio (app/(root)/portfolio/page.tsx:7:19)
+[0m [90m 57 |[39m [36mexport[39m [36masync[39m [36mfunction[39m getPortfolio() {
+ [90m 58 |[39m     [36mconst[39m session [33m=[39m [36mawait[39m auth[33m.[39mapi[33m.[39mgetSession({ headers[33m:[39m [36mawait[39m headers() })[33m;[39m
+[31m[1m>[22m[39m[90m 59 |[39m     [36mif[39m ([33m![39msession[33m?[39m[33m.[39muser) [36mthrow[39m [36mnew[39m [33mError[39m([32m'Not authenticated'[39m)[33m;[39m
+ [90m    |[39m                               [31m[1m^[22m[39m
+ [90m 60 |[39m
+ [90m 61 |[39m     [36mawait[39m connectToDatabase()[33m;[39m
+ [90m 62 |[39m[0m {
+  digest: [32m'127342283'[39m
+}
+ GET / [32m200[39m in 11707ms

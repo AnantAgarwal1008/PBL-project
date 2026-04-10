@@ -1,0 +1,135 @@
+
+> stocks_app@0.1.0 dev
+> next dev --turbopack -p 5000 -H 0.0.0.0
+
+[1G[0K   [1m[38;2;173;127;168m▲ Next.js 15.5.2[39m[22m (Turbopack)
+   - Local:        http://localhost:5000
+   - Network:      http://0.0.0.0:5000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1911ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 7.4s
+ GET / [32m200[39m in 8748ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET / [32m200[39m in 11397ms
+ [37m[1m○[22m[39m Compiling /search ...
+ [32m[1m✓[22m[39m Compiled /search in 619ms
+ GET /search [34m307[39m in 821ms
+ [37m[1m○[22m[39m Compiling /sign-in ...
+ [32m[1m✓[22m[39m Compiled /sign-in in 552ms
+ GET /sign-in [32m200[39m in 736ms
+ [33m[1m⚠[22m[39m Cross origin request detected from 26ec1bc0-d246-44ce-b11d-3078c4ac631c-00-lfph6hjguzio.janeway.replit.dev to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ [37m[1m○[22m[39m Compiling /portfolio ...
+ [32m[1m✓[22m[39m Compiled /portfolio in 651ms
+ [31m[1m⨯[22m[39m Error: Not authenticated
+    at getPortfolio (lib/actions/portfolio.actions.ts:55:31)
+    at async Portfolio (app/(root)/portfolio/page.tsx:6:19)
+[0m [90m 53 |[39m [36mexport[39m [36masync[39m [36mfunction[39m getPortfolio() {
+ [90m 54 |[39m     [36mconst[39m session [33m=[39m [36mawait[39m auth[33m.[39mapi[33m.[39mgetSession({ headers[33m:[39m [36mawait[39m headers() })[33m;[39m
+[31m[1m>[22m[39m[90m 55 |[39m     [36mif[39m ([33m![39msession[33m?[39m[33m.[39muser) [36mthrow[39m [36mnew[39m [33mError[39m([32m'Not authenticated'[39m)[33m;[39m
+ [90m    |[39m                               [31m[1m^[22m[39m
+ [90m 56 |[39m
+ [90m 57 |[39m     [36mawait[39m connectToDatabase()[33m;[39m
+ [90m 58 |[39m[0m {
+  digest: [32m'945518007'[39m
+}
+ GET /portfolio [34m307[39m in 816ms
+ GET /sign-in [32m200[39m in 123ms
+ GET /portfolio [32m200[39m in 751ms
+ GET /search [32m200[39m in 92ms
+ POST /search [32m200[39m in 63ms
+ POST /search [32m200[39m in 567ms
+ [32m[1m✓[22m[39m Compiled /stocks/[symbol] in 448ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /stocks/WMT [32m200[39m in 4464ms
+ POST /stocks/WMT [32m200[39m in 1478ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET /portfolio [32m200[39m in 737ms
+ POST /portfolio [32m200[39m in 3049ms
+ GET /portfolio [32m200[39m in 736ms
+ GET / [32m200[39m in 80ms
+ GET / [32m200[39m in 568ms
+ GET /portfolio [32m200[39m in 767ms
+ GET /search [32m200[39m in 82ms
+ POST /search [32m200[39m in 59ms
+ GET /portfolio [32m200[39m in 768ms
+ GET /search [32m200[39m in 76ms
+ POST /search [32m200[39m in 57ms
+ GET /stocks/NFLX [32m200[39m in 300ms
+Connected to database development - mongodb+srv://anant5150ca6_db_user:8JkYJUC4YiUtIISJ@cluster0.y2dkf6b.mongodb.net/?appName=Cluster0
+ GET / [32m200[39m in 64ms
+ GET /portfolio [32m200[39m in 750ms
+ GET /portfolio [32m200[39m in 725ms
+ [32m[1m✓[22m[39m Compiled in 1026ms
+ [32m[1m✓[22m[39m Compiled in 241ms
+ [32m[1m✓[22m[39m Compiled / in 42ms
+ [32m[1m✓[22m[39m Compiled /portfolio in 58ms
+ GET / [32m200[39m in 1677ms
+ GET / [32m200[39m in 513ms
+ GET /portfolio [32m200[39m in 2582ms
+ GET / [32m200[39m in 547ms
+ GET / [32m200[39m in 523ms
+ GET /portfolio [32m200[39m in 774ms
+ GET / [32m200[39m in 528ms
+ GET /portfolio [32m200[39m in 781ms
+ GET /portfolio [32m200[39m in 728ms
+ GET /portfolio [32m200[39m in 734ms
+ [32m[1m✓[22m[39m Compiled in 177ms
+ [32m[1m✓[22m[39m Compiled / in 62ms
+ GET /portfolio [32m200[39m in 1175ms
+ GET / [32m200[39m in 841ms
+ GET / [32m200[39m in 509ms
+ GET /portfolio [32m200[39m in 736ms
+ GET /portfolio [32m200[39m in 733ms
+ GET / [32m200[39m in 516ms
+ [32m[1m✓[22m[39m Compiled in 299ms
+ [32m[1m✓[22m[39m Compiled / in 140ms
+ GET /portfolio [32m200[39m in 1478ms
+ GET / [32m200[39m in 1002ms
+ GET /portfolio [32m200[39m in 735ms
+ GET / [32m200[39m in 555ms
+ GET /portfolio [32m200[39m in 740ms
+ GET / [32m200[39m in 507ms
+ [32m[1m✓[22m[39m Compiled in 142ms
+ [32m[1m✓[22m[39m Compiled in 204ms
+ [32m[1m✓[22m[39m Compiled /portfolio in 29ms
+ GET / [32m200[39m in 850ms
+ GET /portfolio [32m200[39m in 1057ms
+ GET /portfolio [32m200[39m in 780ms
+ GET / [32m200[39m in 1855ms
+ [32m[1m✓[22m[39m Compiled in 158ms
+ [32m[1m✓[22m[39m Compiled /portfolio in 41ms
+ GET / [32m200[39m in 921ms
+ GET /portfolio [32m200[39m in 1165ms
+ GET / [32m200[39m in 525ms
+ GET /portfolio [32m200[39m in 745ms
+ [32m[1m✓[22m[39m Compiled in 165ms
+ [32m[1m✓[22m[39m Compiled /portfolio in 30ms
+ GET / [32m200[39m in 545ms
+ GET /portfolio [32m200[39m in 1052ms
+ GET / [32m200[39m in 518ms
+ GET /portfolio [32m200[39m in 734ms
+ [32m[1m✓[22m[39m Compiled in 210ms
+ GET / [32m200[39m in 638ms
+ GET /portfolio [32m200[39m in 780ms
+ GET / [32m200[39m in 538ms
+ GET /portfolio [32m200[39m in 767ms
+ [32m[1m✓[22m[39m Compiled in 215ms
+ [32m[1m✓[22m[39m Compiled in 182ms
+ GET / [32m200[39m in 1012ms
+ GET /portfolio [32m200[39m in 1232ms
+ GET / [32m200[39m in 528ms
+ GET /portfolio [32m200[39m in 734ms
+ [32m[1m✓[22m[39m Compiled in 316ms
+ GET / [32m200[39m in 999ms
+ GET /portfolio [32m200[39m in 1203ms
+ GET / [32m200[39m in 533ms
+ GET /portfolio [32m200[39m in 775ms
+ [32m[1m✓[22m[39m Compiled in 259ms
+ [32m[1m✓[22m[39m Compiled in 173ms
+ [32m[1m✓[22m[39m Compiled in 255ms
+ [32m[1m✓[22m[39m Compiled /portfolio in 131ms
+ GET / [32m200[39m in 1161ms
+ GET /portfolio [32m200[39m in 1399ms
